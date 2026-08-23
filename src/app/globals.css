@@ -201,7 +201,9 @@ a {
 }
 
 .header-brand-lockup__tagline {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 100%;
   font-family: var(--font-syne), sans-serif;
@@ -212,9 +214,11 @@ a {
   text-align: center;
   text-transform: uppercase;
   color: var(--navy);
-  white-space: normal;
-  overflow-wrap: normal;
-  word-break: normal;
+}
+
+.header-brand-lockup__tagline-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .header-brand-lockup--compact {
@@ -4860,8 +4864,8 @@ a.contact-sheet__option {
 
 /* —— Ask question FAB —— */
 .ask-fab {
-  --ask-fab-bg: color-mix(in srgb, var(--frost) 34%, var(--pearl));
-  --ask-fab-icon-bg: color-mix(in srgb, var(--mist) 78%, transparent);
+  --ask-fab-bg: #e0ef88;
+  --ask-fab-icon-bg: color-mix(in srgb, var(--pearl) 82%, white);
   position: fixed;
   inset: auto var(--fab-edge) var(--fab-bottom) auto;
   z-index: 58;
@@ -4870,13 +4874,13 @@ a.contact-sheet__option {
   width: 6.5rem;
   height: 6.5rem;
   padding: 0;
-  border: 1px solid color-mix(in srgb, var(--azure) 20%, transparent);
+  border: 1px solid color-mix(in srgb, var(--navy) 14%, #e0ef88);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--ask-fab-bg) 92%, var(--pearl));
+  background: var(--ask-fab-bg);
   color: var(--navy-ink);
   box-shadow:
-    0 14px 34px rgba(53, 68, 89, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+    0 14px 34px rgba(53, 68, 89, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
   cursor: pointer;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -4893,11 +4897,11 @@ body:has(.scroll-top.is-visible) .ask-fab {
 
 .ask-fab:hover {
   transform: translate3d(0, -2px, 0) scale(1.03);
-  border-color: color-mix(in srgb, var(--azure) 32%, transparent);
-  background: color-mix(in srgb, var(--ask-fab-bg) 96%, var(--pearl));
+  border-color: color-mix(in srgb, var(--navy) 22%, #e0ef88);
+  background: color-mix(in srgb, #e0ef88 88%, white);
   box-shadow:
-    0 18px 40px rgba(53, 68, 89, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    0 18px 40px rgba(53, 68, 89, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .ask-fab:focus-visible {
@@ -4934,9 +4938,9 @@ body:has(.scroll-top.is-visible) .ask-fab {
   width: 2.45rem;
   height: 2.45rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--mist) 88%, var(--pearl));
+  background: var(--ask-fab-icon-bg);
   color: var(--navy-ink);
-  box-shadow: 0 4px 12px rgba(53, 68, 89, 0.08);
+  box-shadow: 0 4px 12px rgba(53, 68, 89, 0.1);
 }
 
 .ask-fab__icon-svg {

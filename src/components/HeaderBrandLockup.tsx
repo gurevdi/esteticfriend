@@ -47,9 +47,8 @@ export function HeaderBrandLockup({
       </span>
       {!compact ? (
         <span className="header-brand-lockup__tagline">
-          {BRAND_TAGLINE_LINES[0]}
-          <br />
-          {BRAND_TAGLINE_LINES[1]}
+          <span className="header-brand-lockup__tagline-line">{BRAND_TAGLINE_LINES[0]}</span>
+          <span className="header-brand-lockup__tagline-line">{BRAND_TAGLINE_LINES[1]}</span>
         </span>
       ) : null}
     </Link>

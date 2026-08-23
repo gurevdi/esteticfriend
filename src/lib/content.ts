@@ -39,8 +39,8 @@ export const HEADER_WORDMARK_URL = "/brand/sevens-wordmark.png";
 export const FOOTER_WORDMARK_URL = "/brand/sevens-wordmark-original.png";
 
 export const BRAND_TAGLINE_LINES = [
-  "Косметологическое и медицинское",
-  "оборудование",
+  "Косметологическое и",
+  "медицинское оборудование",
 ] as const;
 
 export const BRAND_TAGLINE = "Косметологическое и медицинское оборудование";
