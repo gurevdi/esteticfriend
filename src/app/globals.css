@@ -1412,6 +1412,16 @@ a {
   margin-top: 1.85rem;
 }
 
+.hero__actions .btn-primary {
+  background: var(--frost);
+  color: var(--navy);
+}
+
+.hero__actions .btn-primary:hover {
+  background: color-mix(in srgb, var(--frost) 86%, white);
+  color: var(--navy-deep);
+}
+
 .hero__ghost,
 .hero__consult {
   display: inline-flex;
