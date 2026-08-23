@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Tenor_Sans } from "next/font/google";
+import { Inter, Tenor_Sans } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import { SiteChrome } from "@/components/SiteChrome";
 import { getCategories, getContactWidgetConfig, getSettings, getSiteInfo } from "@/lib/catalog";
@@ -10,6 +10,11 @@ const tenorSans = Tenor_Sans({
   weight: "400",
   variable: "--font-manrope",
   subsets: ["latin", "cyrillic", "latin-ext"],
+});
+
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-inter",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -52,7 +57,7 @@ export default async function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${tenorSans.variable} h-full`}
+      className={`${tenorSans.variable} ${inter.variable} h-full`}
       data-scroll-behavior="smooth"
     >
       <body className="flex min-h-full flex-col antialiased">

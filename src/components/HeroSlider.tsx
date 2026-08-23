@@ -49,8 +49,7 @@ export function HeroSlider({ slides }: { slides: HeroSlideDTO[] }) {
       }}
     >
       <div className="promo-slider__head">
-        <p className="section-kicker">Акции</p>
-        <h2 className="promo-slider__heading">Спецпредложения для салонов</h2>
+        <h2 className="promo-slider__heading">Специальные предложения</h2>
       </div>
 
       <div className="promo-slider__track" role="list">
