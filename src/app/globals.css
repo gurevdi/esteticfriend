@@ -286,6 +286,12 @@ a {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--azure) 12%, transparent);
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .site-header__search-input {
+    font-size: 16px;
+  }
+}
+
 .site-header__search-status {
   position: absolute;
   right: 0.75rem;
@@ -1122,7 +1128,8 @@ a {
   .site-header__search-input {
     min-height: 2.65rem;
     padding-left: 2.45rem;
-    font-size: 0.88rem;
+    /* iOS zooms the page if a focused input is smaller than 16px */
+    font-size: 16px;
   }
 
   .site-header__search-icon {
