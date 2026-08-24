@@ -69,7 +69,6 @@ export function Hero({ site }: { site: SiteInfo }) {
               {site.heroCtaSecondary}
             </Link>
           </div>
-          <p className="hero__meta animate-rise-delay-2">{site.cities}</p>
         </div>
       </div>
     </section>
