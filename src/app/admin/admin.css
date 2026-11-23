@@ -1640,6 +1640,19 @@
   background: var(--cms-panel);
 }
 
+.admin-brand-card--add {
+  cursor: pointer;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  border-style: dashed;
+}
+
+.admin-brand-card--add:hover {
+  border-color: rgba(53, 68, 89, 0.4);
+  background: white;
+}
+
 .admin-brand-card__name {
   margin: 0.15rem 0 0;
   font-family: var(--font-syne), sans-serif;

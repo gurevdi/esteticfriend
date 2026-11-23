@@ -13,7 +13,9 @@ export function BrandsSection({
   return (
     <section className="brands-section">
       <div className="brands-section__rail">
-        <p className="brands-section__kicker">{config.kicker}</p>
+        {config.kicker.trim() ? (
+          <p className="brands-section__kicker">{config.kicker}</p>
+        ) : null}
         <h2 className="brands-section__title">{config.title}</h2>
         <p className="brands-section__lead">{config.lead}</p>
         {config.cta ? (

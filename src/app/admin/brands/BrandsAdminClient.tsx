@@ -103,7 +103,7 @@ export function BrandsAdminClient({
         </div>
         <div className="admin-page__actions">
           <button type="button" className="btn-primary" onClick={openCreate}>
-            Добавить бренд
+            Добавить партнера
           </button>
         </div>
       </header>
@@ -178,13 +178,13 @@ export function BrandsAdminClient({
         </form>
       </section>
 
-      {brands.length === 0 ? (
-        <div className="admin-panel">
-          <p className="admin-empty">Список брендов пуст.</p>
-        </div>
-      ) : (
-        <div className="admin-brand-grid">
-          {brands.map((brand) => (
+      <div className="admin-brand-grid">
+        {brands.length === 0 ? (
+          <div className="admin-panel">
+            <p className="admin-empty">Список брендов пуст.</p>
+          </div>
+        ) : null}
+        {brands.map((brand) => (
             <article key={brand.id} className="admin-brand-card">
               <div>
                 <h2 className="admin-brand-card__name">{brand.name}</h2>
@@ -221,14 +221,22 @@ export function BrandsAdminClient({
                 </button>
               </div>
             </article>
-          ))}
-        </div>
-      )}
+        ))}
+        <button type="button" className="admin-brand-card admin-brand-card--add" onClick={openCreate}>
+          <div>
+            <h2 className="admin-brand-card__name">Новый партнер</h2>
+            <p className="admin-brand-card__meta">Появится в блоке на главной</p>
+          </div>
+          <div className="admin-item__actions">
+            <span className="admin-action-edit">Добавить</span>
+          </div>
+        </button>
+      </div>
 
       <AdminModal
         open={open}
         onClose={closeModal}
-        title={editing ? "Редактировать бренд" : "Новый бренд"}
+        title={editing ? "Редактировать бренд" : "Новый партнер"}
       >
         <form key={editing?.id || "new"} onSubmit={onSubmit} className="admin-modal-form">
           <label className="admin-field">

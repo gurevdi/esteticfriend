@@ -265,8 +265,8 @@ async function main() {
     ],
     ["heroCtaPrimary", "Перейти в каталог"],
     ["heroCtaSecondary", "Получить консультацию"],
-    ["brandsKicker", "Партнёры"],
-    ["brandsTitle", "Письма о полномочиях"],
+    ["brandsKicker", ""],
+    ["brandsTitle", "Партнеры нашей компании"],
     [
       "brandsLead",
       "Работаем с проверенными заводами и по запросу предоставляем документы на оборудование.",

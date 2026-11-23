@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
+import { LeadForm } from "@/components/LeadForm";
 import { useYandexVideoBg } from "@/hooks/useYandexVideoBg";
 import type { SiteInfo } from "@/lib/catalog";
 
@@ -71,6 +72,15 @@ export function Hero({ site }: { site: SiteInfo }) {
           </div>
         </div>
       </div>
+      <aside className="hero-callback" aria-label="Заказать обратный звонок">
+        <p className="hero-callback__title">Заказать обратный звонок</p>
+        <LeadForm
+          source="hero-callback"
+          compact
+          phoneFirst
+          submitLabel="Заказать звонок"
+        />
+      </aside>
     </section>
   );
 }

@@ -51,7 +51,10 @@ export function ConsultSection({ site }: { site: SiteInfo }) {
         <div className="consult__intro">
           <p className="consult__kicker">Свяжитесь с нами</p>
           <h2 className="consult__title">
-            Оставьте заявку — подготовим подходящее предложение
+            <span>Оставьте заявку</span>
+            <span>— подготовим лучшее</span>
+            <span>коммерческое предложение</span>
+            <span>под ваши цели</span>
           </h2>
           <p className="consult__text">
             Менеджер ответит в ближайшее время и подберёт аппарат под задачи вашего

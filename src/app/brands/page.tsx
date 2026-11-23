@@ -17,8 +17,12 @@ export default async function BrandsPage() {
   return (
     <div className="page">
       <header className="page__head">
-        <p className="section-kicker">{section.kicker}</p>
-        <h1 className="section-title mt-3">{section.title}</h1>
+        {section.kicker.trim() ? (
+          <p className="section-kicker">{section.kicker}</p>
+        ) : null}
+        <h1 className={`section-title uppercase${section.kicker.trim() ? " mt-3" : ""}`}>
+          {section.title}
+        </h1>
         <p className="page__lead">{section.lead}</p>
       </header>
 

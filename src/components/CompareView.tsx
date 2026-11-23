@@ -120,7 +120,7 @@ export function CompareView() {
                       name: item.name,
                       imageUrl: item.imageUrl,
                     }}
-                    className="btn-primary !min-h-9 !px-4 !text-sm"
+                    className="btn-buy !min-h-9 !px-4 !text-sm"
                     label="Купить"
                     compact
                   />

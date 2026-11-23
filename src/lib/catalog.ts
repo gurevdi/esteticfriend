@@ -55,8 +55,8 @@ export type BrandsSectionConfig = {
 };
 
 const DEFAULT_BRANDS_SECTION: BrandsSectionConfig = {
-  kicker: "Партнёры",
-  title: "Письма о полномочиях",
+  kicker: "",
+  title: "Партнеры нашей компании",
   lead: "Работаем с проверенными заводами и по запросу предоставляем документы на оборудование.",
   cta: "Смотреть сертификаты",
   ctaHref: "/certificates",
@@ -645,7 +645,10 @@ export async function getBrandBySlug(slug: string): Promise<BrandDTO | null> {
 export async function getBrandsSectionConfig(): Promise<BrandsSectionConfig> {
   const settings = await getSettings();
   return {
-    kicker: settings.brandsKicker || DEFAULT_BRANDS_SECTION.kicker,
+    kicker:
+      "brandsKicker" in settings
+        ? settings.brandsKicker
+        : DEFAULT_BRANDS_SECTION.kicker,
     title: settings.brandsTitle || DEFAULT_BRANDS_SECTION.title,
     lead: settings.brandsLead || DEFAULT_BRANDS_SECTION.lead,
     cta: settings.brandsCta || DEFAULT_BRANDS_SECTION.cta,
